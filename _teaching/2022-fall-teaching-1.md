@@ -4,7 +4,7 @@ collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2022-fall-teaching-1
 venue: "School of Life Sciences, CUHK"
-date: 2022
+date: 2022-12-30
 location: "Hong Kong SAR"
 ---
 I served as one of the six undergraduate teaching assistants for more than 270 sophomores taking BCHE2030 (Fundamentals of Biochemistry), a SLS core course. I held bi-weekly tutorials and Q&A sessions to enhance students' understanding of concepts taught in lectures and offer them chances to practice and apply what they learnt. Here are the slides we prepared for tutorials: 
