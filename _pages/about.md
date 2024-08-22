@@ -18,11 +18,11 @@ I have eternal curiosity and passion about science and research, and am more tha
 ## Research Interests
 I am pretty much interested in working on genomics, using computational methods to make the sequence speaks. So far I have been working on:
 
-    1. Evaluating the effect of genetic rescue in Florida Panthers (*Puma concolor*) 
+1. Evaluating the effect of genetic rescue in Florida Panthers (*Puma concolor*) 
 
-    2. Investigating the evolution and genetic basis of coloration in strawberry poison frogs (*Oophaga pumilio*) 
+2. Investigating the evolution and genetic basis of coloration in strawberry poison frogs (*Oophaga pumilio*) 
 
-    3. Revealing the herbivory evolution of mangrove crabs (*Episesarma versicolor*, *Parasesarma bidens*, and *Metopograpsus frontalis*).
+3. Revealing the herbivory evolution of mangrove crabs (*Episesarma versicolor*, *Parasesarma bidens*, and *Metopograpsus frontalis*).
 
 **Feel free to contact me if you have anything to discuss!** 
 
