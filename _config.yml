@@ -8,10 +8,10 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Lin Yuan's Page"
+title                    : "Lin Yuan"
 title_separator          : "-"
-name                     : &name "Lin Yuan"
-description              : &description "Lin's Academic Page"
+name                     : "Lin Yuan"
+description              : "A Genetics PhD student working on population genomics in the Department of Molecular Biology & Genetics at Cornell University"
 url                      : https://lin0yuan.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "lin0yuan/lin0yuan.github.io"
@@ -23,7 +23,7 @@ author:
   # Biographic information
   avatar           : "Lynn.jpg"
   name             : "Lin Yuan (Lynn)"
-  pronouns         :  "she/her"
+  pronouns         :  "she/her/hers"
   bio              : #""
   location         : "Ithaca, NY"
   employer         : "Cornell University"
@@ -32,7 +32,7 @@ author:
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : #"https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : https://scholar.google.com/citations?user=ambPzkoAAAAJ&hl=en
   impactstory      : # URL
   orcid            : #"http://orcid.org/yourorcidurl"
   semantic         : # URL
