@@ -7,11 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-Hi there~ I am Lin, a Genetics PhD student at [Cornell University](https://www.cornell.edu/). Currently, I am on my First-Year Rotations of the [Genetics, Genomics, and Development (GGD) Program](https://gendev.cornell.edu/).
+Hi there~ I am Lin, a second-year [Genetics](https://gendev.cornell.edu/) PhD student at [Cornell University](https://www.cornell.edu/) supervised by [Prof. April Wei](https://aprilweilab.github.io/).
 
 Before that, I graduated with a B.Sc. in Cell and Molecular Biology and a minor in Computer Science from [the Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html). I also had a lovely time at [Peking University Shenzhen Graduate School](https://www.pkusz.edu.cn/), [UC Berkeley](https://www.berkeley.edu/), [University of Toronto](https://www.utoronto.ca/), and [Karolinska Institutet](https://ki.se/en) for term-time exchanges and summer research.
 
-[**Here is my CV (Last update: Dec 2024)**](https://lin0yuan.github.io/files/CV_202412.pdf)
+[**Here is my CV (Last update: Mar 2026)**](https://lin0yuan.github.io/files/CV_202603.pdf)
 
 I have eternal curiosity and passion about science and research, and am more than willing to talk with people about new ideas! I am also excited about science promotion and enjoy engaging with young students and the community. 
 
@@ -28,10 +28,16 @@ I am pretty much interested in working on computational and population genomics.
 
 5. Phylodynamic simulation of TB (*Mycobacterium tuberculosis*).
 
+6. Recombination landscape analyses of human pangenome data.
+
+7. Realistic simulation and detection of gene conversion.
+
 **Feel free to contact me if you have anything to discuss!** 
 
 
 ## Hobbies
-In my spare time, I love cooking & baking, visiting museums, listening to classical music, and practicing Zheng (Chinese plucked zither). I love traveling to different places, talking to people, tasting local foods and recreating them in my own kitchen. I enjoy playing board games with families and friends, especially [Hanabi](https://hanabi.github.io/) and [Pandemic](https://boardgamegeek.com/boardgame/161936/pandemic-legacy-season-1). We are keen on exploring and optimizing playing strategies, and I am currently on Lv.9 for Hanabi. Please contact me if you wanna practice with me~
+In my spare time, I love cooking & baking, visiting museums, listening to classical music, and practicing Zheng (Chinese plucked zither). Recently I have become avid on sports, and my ambition is to finish a half-marathon in 2hr 5min and confidently ski a black route by the time I graduate from Cornell. I love traveling to different places, talking to people, tasting local foods and recreating them in my own kitchen. 
 
-I will have a page here sooner or later to document my cooking and favorite recipes :D
+I enjoy playing board games with families and friends, especially [Hanabi](https://hanabi.github.io/) and [Pandemic](https://boardgamegeek.com/boardgame/161936/pandemic-legacy-season-1). We are keen on exploring and optimizing playing strategies, and I am currently practicing up to Lv.12 and experienced at Lv.9 for Hanabi. Please contact me if you wanna play with me~
+
+I am very proud of my cooking talent and enjoy realizing my wildest ideas of balancing or emphasizing aromas and flavors to my everyday cooking. If I were not attracted by biology, I would choose to be a chef. I will have a page here sooner or later to document my cooking and favorite recipes :D
