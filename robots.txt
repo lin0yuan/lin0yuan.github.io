@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lin0yuan.github.io/sitemap.xml

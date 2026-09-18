@@ -1,0 +1,206 @@
+/* ---------------------------------------------------------------
+   lin0yuan.github.io — layered on top of Bulma 0.9.4
+   Accent colour and layout follow a two-column sticky-sidebar
+   academic homepage.
+   --------------------------------------------------------------- */
+
+:root {
+  --accent: rgb(238, 76, 44);
+  --ink: #4a4a4a;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+/* --- sticky left rail ------------------------------------------ */
+
+.sticky {
+  position: sticky;
+  top: 30px;
+}
+
+#sidebar {
+  width: 75%;
+}
+
+/* Bulma has no 20% column, so define one (matches the reference site) */
+@media screen and (min-width: 769px), print {
+  .column.is-2_5 {
+    flex: none;
+    width: 20%;
+  }
+}
+
+.profile-photo {
+  width: 11.6rem;
+  margin-top: 6px;
+}
+
+.profile-photo img {
+  border-radius: 4px;
+}
+
+/* --- social icon row ------------------------------------------- */
+
+.social {
+  padding-top: 0;
+  padding-bottom: 2em;
+  font-size: 1em;
+}
+
+.social a {
+  display: inline-block;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: 15px;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.social a:last-child {
+  margin-right: 0;
+}
+
+.social a:hover {
+  color: var(--accent);
+  transform: scale(1.25);
+}
+
+/* --- page-level nav (Profile / Beyond Research) ------------------ */
+
+.page-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-nav a {
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.page-nav a:hover {
+  background: #f2f3f4;
+  color: var(--accent);
+}
+
+.page-nav a.is-current {
+  background: var(--ink);
+  color: #fff;
+}
+
+.page-nav a.is-current:hover {
+  color: #fff;
+}
+
+/* --- quick-links menu ------------------------------------------ */
+
+.menu-list a.is-active {
+  background-color: var(--ink);
+  color: #fff;
+  font-weight: 600;
+}
+
+#sidebar a:hover {
+  text-decoration: none;
+}
+
+/* --- right-hand content ---------------------------------------- */
+
+.right-panel a:hover {
+  color: var(--accent);
+}
+
+a:active {
+  color: var(--accent);
+}
+
+#intro {
+  margin-top: 0 !important;
+}
+
+.content h2 {
+  margin-top: 2em !important;
+  margin-bottom: 1em !important;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #ededed;
+}
+
+.content h2#intro {
+  margin-top: 0 !important;
+}
+
+.content h3 {
+  margin-top: 2em !important;
+  margin-bottom: 1em !important;
+}
+
+/* Entry rows: thumbnail on the left, detail on the right */
+.columns:not(:last-child) {
+  margin-bottom: 1.75rem !important;
+}
+
+.column.is-3 {
+  margin: auto;
+}
+
+img.img-logo {
+  width: 11em;
+  height: auto;
+}
+
+.content figure {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Text-only entries (teaching) */
+.entry {
+  margin-bottom: 1.5rem;
+}
+
+.entry .entry-meta {
+  color: #7a7a7a;
+  font-size: 0.9em;
+}
+
+/* Publication venue badge, e.g. [PNAS 2025] */
+.pub-badge {
+  color: #e02401;
+}
+
+
+/* --- footer ----------------------------------------------------- */
+
+footer {
+  color: #8c8c8c;
+  font-size: 0.9em;
+}
+
+/* --- narrow screens --------------------------------------------- */
+
+@media screen and (max-width: 768px) {
+  .profile-photo {
+    width: 9rem;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .content figure {
+    width: 60%;
+  }
+
+  img.img-logo {
+    width: 100%;
+  }
+}

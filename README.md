@@ -1,42 +1,93 @@
+# lin0yuan.github.io
 
-# Academic Pages
+Personal academic homepage for Lin Yuan (Lynn) — <https://lin0yuan.github.io/>
 
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
+Two static pages. No build step, no Ruby, no Jekyll: GitHub Pages serves the
+HTML directly (`.nojekyll` tells it not to try to build the repo).
 
-Academic Pages is a Github Pages template for academic websites.
+```
+index.html         profile: about, education, publications, teaching
+beyond.html        hobbies: photo galleries by theme
+css/style.css      shared styles (layered on Bulma)
+css/gallery.css    gallery + lightbox styles
+js/photos.js       generated photo manifest — see below
+js/gallery.js      renders the galleries and the lightbox
+tools/build_gallery.py   regenerates js/photos.js and thumbnails
+images/
+  Lynn.jpg         profile photo (left rail)
+  edu/             institution logos for Education
+  papers/          thumbnails for Publications
+  beyond/          hobby photos, one folder per section
+files/             CV and teaching PDFs
+robots.txt, sitemap.xml   search-engine basics
+publications/, teaching/  redirect stubs for the old Jekyll URLs
+```
 
+Bulma 0.9.4 and Font Awesome 6 load from CDNs — see the `<head>` of each page.
 
-# Getting Started
+## Preview locally
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and add your content.
-1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+```sh
+python3 -m http.server 8000
+# open http://localhost:8000
+```
 
-See more info at https://academicpages.github.io/
+## Adding a publication
 
-## Running Locally
+Copy an existing `<article class="columns">` block inside the `#publications`
+section of `index.html` and edit it. Newest first.
 
-When you are initially working your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
+```html
+<article class="columns">
+  <div class="column is-3">
+    <figure class="image">
+      <img src="images/papers/YOUR-THUMB.png" alt="...">
+    </figure>
+  </div>
+  <div class="column">
+    <div class="content">
+      <p>
+        <b>Paper title</b><br>
+        Author One, <b>Lin Yuan</b>, Author Three<br>
+        <b><span class="pub-badge">[Venue 2026]</span></b><i> Full Journal Name, 2026</i><br>
+        <a href="..." target="_blank" rel="noopener">[Paper]</a>
+      </p>
+    </div>
+  </div>
+</article>
+```
 
-1. Clone the repository and made updates as detailed above.
-1. Make sure you have ruby-dev, bundler, and nodejs installed: `sudo apt install ruby-dev ruby-bundler nodejs`
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
+`pub-badge` is the red venue tag. Bold your own name in the author list.
 
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
+## Adding photos to Beyond Research
 
-# Maintenance 
+1. Drop photos into `images/beyond/<section>/` (`cooking`, `travel`, `music`,
+   `sports` — or a new folder for a new section).
+2. Run `python3 tools/build_gallery.py`. It writes `js/photos.js` and makes
+   900px thumbnails in each `thumbs/` folder, so the grid stays fast even with
+   hundreds of photos.
+3. Optionally add a `title` and `note` to entries in `js/photos.js`. These are
+   preserved the next time you regenerate.
 
-Bug reports and feature requests to the template  should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+The grid shows 24 photos per section with a "Show all" button, images are
+lazy-loaded, and clicking one opens a lightbox (arrow keys navigate, Esc closes).
 
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
+To rename or reorder sections, edit `SECTION_TITLES` / `SECTION_ORDER` at the
+top of `tools/build_gallery.py`.
 
-## Bugfixes and enhancements
+## Adding a section to the profile page
 
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
+Add an `<h2 id="yourid">` in the right panel of `index.html` and a matching
+`<li><a href="#yourid">` in the `#sidebar` Quick Links list. The scroll-spy
+script at the bottom of the file picks it up automatically.
 
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch.
+## Notes
+
+- The left rail is duplicated in `index.html` and `beyond.html`. If you change
+  your photo, name, links or nav, change it in both.
+- Avoid naming custom CSS classes after Bulma components (`tile`, `box`, `card`,
+  `level`, `media`, `hero`, `tag`). Bulma's rules will win and break the layout —
+  the gallery classes are prefixed `photo-` for this reason.
+- `images/edu/*.svg` and `images/papers/*.svg` are grey placeholders. Replace
+  them with real logos and figures, keeping the filenames.
+- Search `index.html` for `TODO` to find the spots that still need checking.
